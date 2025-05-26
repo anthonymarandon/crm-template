@@ -5,7 +5,7 @@ export default function CTA() {
   const imageUrl = 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80';
 
   return (
-    <div className="bg-gray-100 p-8 md:p-16 max-w-7xl mx-auto shadow font-sans text-center">
+    <div className="bg-gray-100 p-8 md:p-16 w-full mx-auto shadow font-sans text-center">
 
       <img
         src={imageUrl}

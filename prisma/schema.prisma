@@ -18,3 +18,5 @@ model User {
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
 }
+
+// Ajoutez d'autres modèles ici
