@@ -129,7 +129,7 @@ Le projet est pré-configuré pour Netlify avec le fichier `netlify.toml` inclus
    - `JWT_SECRET`
 4. **Déployer** : Le déploiement se lance automatiquement !
 
-> ✅ **Déploiement automatique** : Chaque push sur votre branche principale déclenche un nouveau déploiement.
+✅ **Déploiement automatique** : Chaque push sur votre branche principale déclenche un nouveau déploiement.
 
 ## 🔧 Scripts Disponibles
 
