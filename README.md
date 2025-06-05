@@ -4,7 +4,7 @@ Ce template est prêt à l'emploi et offre une base prête à l'emploi pour dém
 
 ## 🚀 Etape 1 : Installation
 
-## Ouvez votre éditeur de code ou terminal au dossier de votre choix et exécutez les commandes suivantes :
+## Ouvrez votre éditeur de code ou terminal au dossier de votre choix et exécutez les commandes suivantes :
 
 1. Clonez le dépôt :
 ```bash
@@ -30,12 +30,12 @@ Le projet utilise Prisma comme ORM. Vous pouvez configurer votre base de donnée
 DATABASE_URL="postgresql://postgres:(votre_mot_de_passe)@localhost:5432/(nom_db)?schema=public"
 ```
 
-4. générez le schema prisma pour que prisma puisse comprendre le schema de la base de données :
+4. Générez le schéma Prisma pour que prisma puisse comprendre le schéma de la base de données :
 ```bash
 npx prisma generate
 ```
 
-5. initialisez la base de données et le schema prisma :
+5. Initialisez la base de données et le schéma Prisma :
 ```bash
 npx prisma migrate dev --name init
 ```
@@ -68,7 +68,10 @@ JWT_SECRET="votre_clé_secrète_pour_jwt"
 
 ## 📁 Structure du Projet
 
-Le projet est organisé dans un dossier `src` avec les fonctionnalités suivantes :
+Le projet s'articule principalement autour du dossier `src`.  
+Vous trouverez ci-dessous un résumé des fonctionnalités ainsi qu'un aperçu de l'arborescence :
+
+### Fonctionnalités principales
 
 - Page d'accueil avec présentation
 - Système d'authentification complet (connexion/inscription)
@@ -76,29 +79,31 @@ Le projet est organisé dans un dossier `src` avec les fonctionnalités suivante
 - Gestion des sessions
 - Système de déconnexion
 
+### Arborescence des dossiers
+
 ```
-📦 crm-template (Racine du projet)
-├── 📂 src (Code source principal)
-│   ├── 📂 app (Routes et pages Next.js)
-│   │   ├── 📂 (auth) (Groupe de routes authentification)
-│   │   │   ├── 📂 login (Page de connexion)
-│   │   │   └── 📂 register (Page d'inscription)
-│   │   ├── 📂 dashboard (Tableau de bord utilisateur)
-│   │   ├── 📂 api (Routes API Next.js)
-│   │   └── 📄 layout.tsx (Layout principal de l'application)
-│   ├── 📂 lib (Utilitaires et fonctions partagées)
-│   │   ├── 📂 auth (Fonctions d'authentification)
-│   │   └── 📂 utils (Fonctions utilitaires)
-│   └── 📂 types (Définitions TypeScript)
-├── 📂 prisma (Configuration de la base de données)
-│   ├── 📄 schema.prisma (Schéma de la base de données)
-│   └── 📄 migrations (Migrations de la base de données)
-├── 📂 public (Fichiers statiques)
-│   └── 📂 assets (Images, fonts, etc.)
-├── 📄 .env (Variables d'environnement)
-├── 📄 next.config.ts (Configuration Next.js)
-├── 📄 package.json (Dépendances et scripts)
-└── 📄 tsconfig.json (Configuration TypeScript)
+📦 crm-template
+├── src/                 # Code source principal
+│   ├── app/             # Routes et pages Next.js
+│   │   ├── (auth)/      # Groupe de routes d'authentification
+│   │   │   ├── login/       # Page de connexion
+│   │   │   └── register/    # Page d'inscription
+│   │   ├── dashboard/   # Tableau de bord utilisateur
+│   │   ├── api/         # Routes API Next.js
+│   │   └── layout.tsx   # Layout principal de l'application
+│   ├── lib/             # Utilitaires et fonctions partagées
+│   │   ├── auth/        # Fonctions d'authentification
+│   │   └── utils/       # Fonctions utilitaires
+│   └── types/           # Définitions TypeScript
+├── prisma/              # Configuration de la base de données
+│   ├── schema.prisma    # Schéma de la base de données
+│   └── migrations/      # Migrations Prisma
+├── public/              # Fichiers statiques
+│   └── assets/          # Images, fonts, etc.
+├── .env                 # Variables d'environnement
+├── next.config.ts       # Configuration Next.js
+├── package.json         # Dépendances et scripts
+└── tsconfig.json        # Configuration TypeScript
 ```
 
 ## 🚀 Démarrage Rapide
