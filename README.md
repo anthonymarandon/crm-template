@@ -1,55 +1,57 @@
 # Template d'Application Next.js 15 avec TypeScript
 
-Ce template est prêt à l'emploi et offre une base prête à l'emploi pour démarrer votre projet Next.js avec TypeScript.
+Ce template offre une base solide pour démarrer rapidement un projet Next.js avec TypeScript.
 
-## 🚀 Etape 1 : Installation
+## 🚀 Étape 1&nbsp;: Installation
 
-## Ouvrez votre éditeur de code ou terminal au dossier de votre choix et exécutez les commandes suivantes :
+Dans un terminal, exécutez&nbsp;:
 
-1. Clonez le dépôt :
-```bash
-git clone https://github.com/anthonymarandon/crm-template.git
-```
+1. **Clonez le dépôt puis placez‑vous dans le dossier**
+   ```bash
+   git clone https://github.com/anthonymarandon/crm-template.git
+   cd crm-template
+   ```
 
-## Une fois le dépôt cloné, ouvrez le dossier et exécutez les commandes suivantes :
+2. **Installez les dépendances**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   # ou
+   pnpm install
+   ```
 
-2. Installez les dépendances :
-```bash
-npm install
-# ou
-yarn install
-# ou
-pnpm install
-```
+3. **Configurez la base de données**
 
-3. Configuration de la Base de Données
+   Le projet utilise Prisma comme ORM. Ajoutez un fichier `.env` à la racine avec l'URL de connexion (PostgreSQL doit être installé localement ou disponible en ligne) :
 
-Le projet utilise Prisma comme ORM. Vous pouvez configurer votre base de données en ajoutant le fichier `.env` dans le dossier racine du projet (Assurez vous au préalable d'avoir installé Postgres sur votre machine ou d'utiliser un service de base de données en ligne) :
+   ```env
+   DATABASE_URL="postgresql://postgres:(votre_mot_de_passe)@localhost:5432/(nom_db)?schema=public"
+   ```
 
-```env
-DATABASE_URL="postgresql://postgres:(votre_mot_de_passe)@localhost:5432/(nom_db)?schema=public"
-```
+4. **Générez le schéma Prisma**
 
-4. Générez le schéma Prisma pour que prisma puisse comprendre le schéma de la base de données :
-```bash
-npx prisma generate
-```
+   ```bash
+   npx prisma generate
+   ```
 
-5. Initialisez la base de données et le schéma Prisma :
-```bash
-npx prisma migrate dev --name init
-```
+5. **Initialisez la base de données**
 
-6. Lancez le serveur de développement :
-```bash
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
-```
+   ```bash
+   npx prisma migrate dev --name init
+   ```
 
-7. Sécurité nécessaire pour les fonctionnalités de connexion :
+6. **Lancez le serveur de développement**
+
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   # ou
+   pnpm dev
+   ```
+
+7. **Sécurité nécessaire pour la connexion**
 
 - Utilisez une clé JWT_SECRET forte dans votre fichier `.env`
 ```env
@@ -108,26 +110,26 @@ Vous trouverez ci-dessous un résumé des fonctionnalités ainsi qu'un aperçu d
 
 ## 🚀 Démarrage Rapide
 
-Une fois l'installation terminée, accédez à :
+Après avoir suivi les étapes ci-dessus, ouvrez votre navigateur à l'adresse :
 - http://localhost:3000 pour voir l'application
 
 ## 📝 Notes
 
-- Assurez-vous d'avoir Node.js 18+ installé
+- Assurez-vous d'avoir Node.js 18 ou supérieur installé
 - Le projet utilise TypeScript pour une meilleure maintenabilité
 
 ## 🚀 Déploiement avec Netlify
 
-Le projet est déjà configuré pour un déploiement facile sur Netlify :
+Le projet est prêt pour un déploiement simple sur Netlify.
 
-- Le fichier `netlify.toml` est inclus dans le projet
+- Le fichier `netlify.toml` est déjà fourni
 - Les paramètres de build sont préconfigurés
-- Les variables d'environnement peuvent être configurées directement dans l'interface Netlify
+- Les variables d'environnement se définissent directement dans l'interface Netlify
 
-Pour déployer :
-1. Connectez votre dépôt GitHub à Netlify
-2. Les paramètres de build seront automatiquement détectés
-3. Configurez vos variables d'environnement dans l'interface Netlify
-4. Déployez !
+Pour déployer&nbsp;:
+1. Connectez ce dépôt GitHub à Netlify
+2. Laissez Netlify détecter automatiquement la configuration
+3. Renseignez vos variables d'environnement
+4. Lancez le déploiement
 
-Le déploiement se fera automatiquement à chaque push sur votre branche principale.
+À chaque push sur la branche principale, un nouveau déploiement sera effectué automatiquement.
